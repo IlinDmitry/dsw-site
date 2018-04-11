@@ -34,7 +34,7 @@ RSpec.configure do |config|
 
   config.after(:each) do
     if Rails.env.test? || Rails.env.cucumber?
-      FileUtils.rm_rf(Dir["#{Rails.root}/spec/support/uploads"])
+      FileUtils.rm_rf(Dir["#{Rails.root}/tmp/uploads"])
     end
   end
 end
